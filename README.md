@@ -4,23 +4,39 @@ This is a starter template for [Ionic](http://ionicframework.com/docs/) projects
 
 *This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+To test this template, either install a ionic using the node.js utility.
 
 ### With the Ionic CLI:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+To install the ionic.
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
 ```
 
-Then, to run it, cd into `mySideMenu` and run:
+Download this repository using:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ git clone https://github.com/MatheusPSantos/Emercontact
 ```
 
-Substitute ios for android if not on a Mac.
+Then cd into `EmerContact` and run the next comand to install dependences:
 
+```bash
+$ npm install
+```
+
+Then, to run it, run:
+
+```bash
+$ ionic cordova platform add android
+$ ionic cordova run android
+```
+
+Substitute android for ios if not on a Mac.
+
+To view this application in the browser run:
+```bash
+$ ionic serve -l android
+```
+Substitute android for ios for view application using the ios layout.

@@ -3,16 +3,206 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>EmerContact</ion-title>
   </ion-navbar>
 </ion-header>
 
+<style>
+  h3 {
+    color: gray;
+  }
+</style>
+
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>Números de emergência</h3>
 
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    Clique para chamar
   </p>
+  <!-- list white emergency numbers -->
+  <!-- Ambulância -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Ambulância, Tel: 192
+      </ion-card-title>
+      <p>
+        Em caso de emergência médica, chame por este número e será disponibilizado uma ambulância o mais rápido possível.
+      </p>
+      <!-- botão de chamada -->
+      <button ion-button color="secondary" round outline (click)="callNumber('192')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Bombeiros -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Bombeiros, Tel: 193
+      </ion-card-title>
+      <p>Em caso de afogamento, incêndio ou outras emergências médicas, será chamado uma equipe do corpo de bombeiros mais próxima de você.</p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('193')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Centro de Valorização da Vida -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Centro de Valorização da Vida, Tel: 141
+      </ion-card-title>
+      <p>
+        Em caso de necessidade de calor humano, atenção, alguém para desabafar, entre em contato com este número.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber()">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Defesa Civil -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Defesa Civil, Tel: 199
+      </ion-card-title>
+      <p>
+      Ações preventivas de socorro, assistenciais e reconstrutivas destinadas a evitar ou minimizar os desastres naturais.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('199')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+    </ion-card>
+
+  <!-- Delegacia da Mulher -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Delegacia da Mulher, Tel: 180
+      </ion-card-title>
+      <p>
+        Para crimes cometidos contra a mulher.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('180')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Diretiros Humanos -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Diretiros Humanos, Tel: 100
+      </ion-card-title>
+      <p>
+        Em caso de denúncia de crimes contra os Direitos Humanos.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('100')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!--Disque denúncia -->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Disque Denúncia, Tel: 181
+      </ion-card-title>
+      <p>
+        Caso você tenha uma denúncia, entre em contato com este número.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('181')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Polícia Civil-->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Polícia Civil, Tel: 197
+      </ion-card-title>
+      <p>
+        Instituição que exerce função de polícia judiciária nas unidades federativas do Brasil. 
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('197')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Polícia Federal-->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Polícia Federal, Tel: 194
+      </ion-card-title>
+      <p>
+          A Polícia Federal possui amplas atribuições, tanto de polícia administrativa quanto de polícia judiciária.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('194')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Polícia Militar-->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Polícia Militar, Tel: 190
+      </ion-card-title>
+      <p>
+        Polícia responsável pelo policiamento ostensivo.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('190')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Polícia Rodoviária Federal-->
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Polícia Rodoviária Federal, Tel: 191 
+      </ion-card-title>
+      <p>
+        Instituição policial ostensiva que tem a função de garantir a segurança nas rodovias federais.
+      </p>
+      
+      <button ion-button color="secondary" round outline (click)="callNumber('191')">
+        Chamar este número &nbsp;
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
