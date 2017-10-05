@@ -20,7 +20,7 @@ Download this repository using:
 $ git clone https://github.com/MatheusPSantos/Emercontact
 ```
 
-Then cd into `EmerContact` and run the next comand to install dependences:
+Then cd into `EmerContact` and run the next comand to install dependencies:
 
 ```bash
 $ npm install
